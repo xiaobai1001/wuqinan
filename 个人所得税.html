@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="Keywords" content="个人所得税" />
+    <meta name="Description" content="个人所得税计算器" />
+    <title>个人所得税 - Designed and produced by 邬勤安</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=0723" />
+    <link rel="stylesheet" type="text/css" href="./css/site.css?v=0723" />
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/site.js?v=0723"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="title"><h2>累计预扣法 · 个人所得税计算表</h2></div>
+        <div class="top">
+            <div class="left">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>税前月收入</th>
+                            <th>个税起征点</th>
+                            <th>专项扣除(社保公积金)</th>
+                            <th>专项附加扣除</th>
+                            <th>依法确定的其他扣除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="number" class="form-input" id="税前月收入" /></td>
+                            <td><input type="number" class="form-input" id="个税起征点" /></td>
+                            <td><input type="number" class="form-input" id="社保公积金" /></td>
+                            <td><input type="number" class="form-input" id="专项附加扣除" /></td>
+                            <td><input type="number" class="form-input" id="其他扣除" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>实际年收入</th>
+                            <th width="20">&nbsp;</th>
+                            <th>年收入</th>
+                            <th width="20">&nbsp;</th>
+                            <th>年缴社保公积金</th>
+                            <th width="20">&nbsp;</th>
+                            <th>年累计纳税额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="point" id="实际年收入"></td>
+                            <td width="20">=</td>
+                            <td class="point" id="年收入"></td>
+                            <td width="20">-</td>
+                            <td class="point" id="年缴社保公积金"></td>
+                            <td width="20">-</td>
+                            <td class="point" id="年累计纳税额"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="60">月份</th>
+                        <th>月收入</th>
+                        <th>免税收入</th>
+                        <th>减除费用</th>
+                        <th>专项扣除(社保公积金)</th>
+                        <th>专项附加扣除</th>
+                        <th>依法确定的其他扣除</th>
+                        <th>累计收入</th>
+                        <th>累计免税收入</th>
+                        <th>累计减除费用</th>
+                        <th>累计专项扣除</th>
+                        <th>累计专项附加扣除</th>
+                        <th>累计依法确定的其他扣除</th>
+                        <th>累计预扣预缴应纳税所得额</th>
+                        <th>预扣率（%）</th>
+                        <th>速算扣除数</th>
+                        <th>应预扣预缴税款</th>
+                        <th>已预扣预缴税款</th>
+                        <th>实际应预扣预缴税款</th>
+                        <th>实际收入</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn">
+            <button type="button" id="save">保存</button>
+            <button type="button" id="reset">重置</button>
+        </div>
+        <div class="footer"><h2>您尚未达到起征点! 无需计算!</h2></div>
+    </div>
+</body>
+</html>
