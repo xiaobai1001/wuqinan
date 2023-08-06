@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: pink;
+    user-select: none;
+}
+
+body .text {
+    color: rgb(206, 147, 147);
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+ 
+.time-box {
+    width: 13em;
+    height: 13em;
+    font-size:3em;
+    line-height: 13em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow:  -3px -3px 3px rgb(170, 71, 124),3px 3px 3px rgb(248, 218, 223);
+    border-radius: 50%;
+    box-shadow: 6px 6px 3px rgb(170, 71, 124) inset,-6px -6px 3px rgb(248, 218, 223) inset;
+}
+
+@media screen and (max-width: 1080px) {
+    .time-box {
+        margin: 23.9vh auto;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .time-box {
+        margin: 5.9vh auto;
+    }
+}
